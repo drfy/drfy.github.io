@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+[![Version](https://img.shields.io/github/package-json/v/dmego/home.github.io)](https://www.npmjs.com/package/dmego-home-page)
+[![Website](https://img.shields.io/website-up-down-green-red/http/i.dmego.cn.svg)](http://i.dmego.cn/)
+[![License](https://img.shields.io/github/license/dmego/home.github.io.svg)](/LICENSE)
+[![Say Thanks](https://img.shields.io/badge/Say-Thanks!-1EAEDB.svg)](https://saythanks.io/to/dmego)
 
-You can use the [editor on GitHub](https://github.com/drfy/drfy.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 个人主页
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+>这是我的个人主页
 
-### Markdown
+>衍生自 [Vno](https://github.com/onevcat/vno-jekyll) Jekyll 主题
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+>页面部分加载效果借鉴于 [Mno](https://github.com/mcc108/mno) Ghost 主题
 
-```markdown
-Syntax highlighted code block
+>借鉴了[北岛向南的小屋](https://javef.github.io/)的头像样式
 
-# Header 1
-## Header 2
-### Header 3
+### 效果图
 
-- Bulleted
-- List
+>静态图
 
-1. Numbered
-2. List
+![主页JPG](https://unpkg.com/dmego-home-page@latest/assets/img/home.jpg)
 
-**Bold** and _Italic_ and `Code` text
+>动态图
 
-[Link](url) and ![Image](src)
-```
+![主页GIF](https://unpkg.com/dmego-home-page@latest/assets/img/home.gif)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 注
 
-### Jekyll Themes
+- 访问地址：[个人主页](http://i.dmego.cn/)
+- 使用了 [一言](http://hitokoto.cn/) 的 API 服务
+- ~~使用了 [Bing 壁纸 API](https://github.com/xCss/bing/) 服务~~
+- ~~使用了 [Yahoo Query Language (YQL)](https://developer.yahoo.com/yql/) 来解决获取 Bing 壁纸跨域问题~~
+- ~~原先 YQL 服务将被淘汰，现改用 [JsonBird](https://bird.ioliu.cn/)~~
+- 使用 `GitHub Action` 来获取 Bing 壁纸，使用 `JSONP` 获取 Bing 壁纸 URL 文件
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/drfy/drfy.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### GitHub Action 补充说明
 
-### Support or Contact
+- 利用 `Github Action` 提交代码需要一个 `GitHub API` 令牌, 可以在 [Create Tokens](https://github.com/settings/tokens) 这个地址，点击 `Generate new token` 按钮来创建
+  - `Expiration` 过期时间设置为 `No expiration`
+  - `Select scopes` 勾选 `repo`
+  - 点击 `Generate Token` 生成
+- 在仓库的 `Settings` ——>`Secrets` 功能栏中，点击 `New repository secrets` 按钮
+  -  在 `Name` 框中填写 `GH_TOKEN`
+  - 在 `Secrets` 栏中填写第一步生成的 `Token` 值
+- 详细配置步骤图可以参考《[GitHub Action 配置详细步骤](./ActionNotes.md)》文档
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### 更新记录
+- 2022-06-10
+  - 发布 NPM 包，使用 UNPKG 作为资源文件的 CDN 
+- 2023-02-27
+  - 添加《GitHub Action 配置详细步骤》文档
+- 2023-04-12
+  - 移除 Jquery 依赖，使用原生 JS
+- 2023-08-28
+  - 将壁纸地址换成 cn.bing.com
+
+### Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=dmego/home.github.io&type=Date)](https://star-history.com/#dmego/home.github.io&Date)
+
